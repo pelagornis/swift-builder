@@ -6,7 +6,7 @@ Builder Patterns for Flexible Syntax in Swift
 
 ## Requirements
 - iOS 11.0+ / macOS 10.13+ / tvOS 11.0+ / watchOS 4.0+
-- Swift 5.8+
+- Swift 5.0+
 
 ## Installation
 Builder was deployed as Swift Package Manager. Package to install in a project. Add as a dependent item within the swift manifest.
