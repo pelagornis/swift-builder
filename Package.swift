@@ -16,5 +16,6 @@ let package = Package(
         .testTarget(
             name: "BuilderTests",
             dependencies: ["Builder"]),
-    ]
+    ],
+    swiftLanguageVersions: [.v5]
 )
