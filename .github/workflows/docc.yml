@@ -7,6 +7,7 @@ on:
   push:
     branches:
       - main
+
 concurrency:
   group: docc-${{ github.head_ref }}
   cancel-in-progress: true
@@ -58,7 +59,7 @@ jobs:
       - name: Fix permissions
         run: 'sudo chown -R $USER docs-out'
       - name: Publish documentation to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.7
+        uses: JamesIves/github-pages-deploy-action@4.4.1
         with:
           branch: gh-pages
           folder: docs-out
