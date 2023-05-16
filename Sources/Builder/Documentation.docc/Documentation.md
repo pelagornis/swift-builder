@@ -1,13 +1,12 @@
-# ````
+# ``Builder``
 
-<!--@START_MENU_TOKEN@-->Summary<!--@END_MENU_TOKEN@-->
+Builder Patterns for Flexible Syntax in Swift
 
 ## Overview
 
-<!--@START_MENU_TOKEN@-->Text<!--@END_MENU_TOKEN@-->
+This library provides the ability to use Builder patterns within Swift.
 
 ## Topics
 
-### <!--@START_MENU_TOKEN@-->Group<!--@END_MENU_TOKEN@-->
-
-- <!--@START_MENU_TOKEN@-->``Symbol``<!--@END_MENU_TOKEN@-->
+### Essentials
+- <doc:GettingStarted>
