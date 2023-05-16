@@ -1,5 +1,6 @@
 import Foundation
 
+/// Builder Features.
 @dynamicMemberLookup
 public struct Builder<Base> {
     /// Base
@@ -12,7 +13,7 @@ public struct Builder<Base> {
 
     /// Readable and flexible data settings
     ///
-    ///```
+    ///```swift
     /// let view = UIView()
     ///           .builder()
     ///           .backgroundColor(.red)
@@ -33,7 +34,7 @@ public struct Builder<Base> {
 
     /// Execute closure using objects as arguments within a builder pattern
     ///
-    /// ```
+    /// ```swift
     /// let view = UIView()
     ///               .builder()
     ///               .backgroundColor(.red)
@@ -41,7 +42,6 @@ public struct Builder<Base> {
     ///                   $0.layer.cornerRadius = 15
     ///                }
     ///                .build()
-    ///                                 
     /// ```
     ///
     /// - Parameter block: The closure to execute.

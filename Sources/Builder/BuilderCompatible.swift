@@ -6,6 +6,7 @@ import Foundation
   import UIKit.UIGeometry
 #endif
 
+/// Protocol required to support builder patterns.
 public protocol BuilderCompatible {
     associatedtype Base
     func builder() -> Builder<Base>
