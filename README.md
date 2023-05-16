@@ -27,6 +27,11 @@ Then import the Builder from thr location you want to use.
 import Builder
 ```
 
+## Documentation
+The documentation for releases and ``main`` are available here:
+- [``main``](https://pelagornis.github.io/Builder/main/documentation/builder)
+
+
 ## Using
 Initializer UIView with ``Builder``
 
