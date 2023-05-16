@@ -2,7 +2,7 @@
 
 ![SPM](https://img.shields.io/badge/SPM-compatible-brightgreen.svg)
 ![Swift](https://img.shields.io/badge/Swift-5.7-orange.svg)
-[![License](https://img.shields.io/github/license/pelagornis/PLCommand)](https://github.com/pelagornis/PLCommand/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/pelagornis/Builder)](https://github.com/pelagornis/Builder/blob/main/LICENSE)
 ![Platform](https://img.shields.io/badge/platforms-iOS%2011.0-red)
 ![Platform](https://img.shields.io/badge/platforms-macOS%2010.3-red)
 ![Platform](https://img.shields.io/badge/platforms-tvOS%2011.0-red)
