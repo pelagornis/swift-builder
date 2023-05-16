@@ -1,4 +1,4 @@
-// swift-tools-version: 5.8
+// swift-tools-version: 5.7
 import PackageDescription
 
 let package = Package(
@@ -9,6 +9,9 @@ let package = Package(
             name: "Builder",
             targets: ["Builder"]),
     ],
+    dependencies: [
+        .package(url: "https://github.com/apple/swift-docc-plugin.git", from: "1.2.0")
+    ],
     targets: [
         .target(
             name: "Builder",
@@ -16,6 +19,5 @@ let package = Package(
         .testTarget(
             name: "BuilderTests",
             dependencies: ["Builder"]),
-    ],
-    swiftLanguageVersions: [.v5]
+    ]
 )
