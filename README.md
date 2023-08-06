@@ -13,7 +13,7 @@ Builder was deployed as Swift Package Manager. Package to install in a project. 
 let package = Package(
     ...
     dependencies: [
-        .package(url: "https://github.com/Pelagornis/Builder.git", from: "1.0.0")
+        .package(url: "https://github.com/pelagornis/builder.git", from: "1.0.1")
     ],
     ...
 )
@@ -26,7 +26,7 @@ import Builder
 
 ## Documentation
 The documentation for releases and ``main`` are available here:
-- [``main``](https://pelagornis.github.io/Builder/main/documentation/builder)
+- [``main``](https://pelagornis.github.io/builder/main/documentation/builder)
 
 
 ## Using
