@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "Builder",
+    name: "builder",
     platforms: [.iOS(.v11), .macOS(.v10_13), .tvOS(.v11), .watchOS(.v4)],
     products: [
         .library(
@@ -10,12 +10,13 @@ let package = Package(
             targets: ["Builder"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-docc-plugin.git", from: "1.2.0")
+        .package(url: "https://github.com/apple/swift-docc-plugin.git", from: "1.3.0")
     ],
     targets: [
         .target(
             name: "Builder",
-            dependencies: []),
+            dependencies: []
+        ),
         .testTarget(
             name: "BuilderTests",
             dependencies: ["Builder"]),
