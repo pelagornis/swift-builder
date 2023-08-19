@@ -1,8 +1,19 @@
-//
-//  BuilderMacro.swift
-//  
-//
-//  Created by Jihoon on 8/19/23.
-//
+import SwiftSyntax
+import SwiftSyntaxBuilder
+import SwiftSyntaxMacros
 
-import Foundation
+public struct BuilderMacro: ExtensionMacro {
+    public static func expansion(
+        of node: AttributeSyntax,
+        attachedTo declaration: some DeclGroupSyntax,
+        providingExtensionsOf type: some TypeSyntaxProtocol,
+        conformingTo protocols: [TypeSyntax],
+        in context: some MacroExpansionContext
+    ) throws -> [ExtensionDeclSyntax] {
+        return try [
+            ExtensionDeclSyntax(
+                "extension \(raw: type.description): BuilderCompatible {}"
+            )
+        ]
+    }
+}
