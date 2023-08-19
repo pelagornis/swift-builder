@@ -51,15 +51,6 @@ let view: UIView = {
 }()
 ```
 
-## Support Macro
-Starting with Swift version `5.9`, `@Builder` macro is supported.
-
-```swift
-@Builder
-struct Pelagornis {
-    var libraryName: String?
-}
-```
 
 ## License
 **Builder** is under MIT license. See the [LICENSE](LICENSE) file for more info.
