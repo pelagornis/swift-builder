@@ -40,3 +40,13 @@ let view: UIView = {
     return view
 }()
 ```
+
+## Support Macro
+Starting with Swift version `5.9`, `@Builder` macro is supported.
+
+```swift
+@Builder
+struct Pelagornis {
+    var libraryName: String?
+}
+```
