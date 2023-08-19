@@ -8,7 +8,7 @@ Builder was deployed as Swift Package Manager. Package to install in a project. 
 let package = Package(
     ...
     dependencies: [
-        .package(url: "https://github.com/Pelagornis/Builder.git", from: "1.0.0")
+        .package(url: "https://github.com/pelagornis/builder.git", from: "1.0.1")
     ],
     ...
 )
@@ -39,4 +39,14 @@ let view: UIView = {
     view.backgroundColor(.systemBlue)
     return view
 }()
+```
+
+## Support Macro
+Starting with Swift version `5.9`, `@Builder` macro is supported.
+
+```swift
+@Builder
+struct Pelagornis {
+    var libraryName: String?
+}
 ```
