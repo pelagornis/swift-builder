@@ -14,7 +14,12 @@ concurrency:
 
 jobs:
   build:
-    runs-on: macos-latest
+    name: Swift ${{ matrix.swift }} on ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        swift: ["5.9"]
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout Package
         uses: actions/checkout@v3
@@ -25,6 +30,12 @@ jobs:
         with:
           ref: gh-pages
           path: docs-out
+      - name: Install Swift
+        uses: ./
+        with:
+          swift-version: ${{ matrix.swift }}
+      - name: View Swift Version
+        run: swift --version
       - name: Build documentation
         run: >
           rm -rf docs-out/.git;
