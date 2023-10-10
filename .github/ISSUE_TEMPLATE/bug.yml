@@ -1,5 +1,5 @@
 name: Bug Report
-description: Found a bug in RefineUI Apple? Create a report!
+description: Found a bug in Builder? Create a report!
 title: "Insert title here"
 labels: ["type:bug"]
 body:
@@ -42,7 +42,7 @@ body:
     attributes:
       label: macOS version
       description: Which macOS version are you using?
-      placeholder: "12.0"
+      placeholder: "13.0"
     validations:
       required: true
   - type: input
@@ -50,7 +50,7 @@ body:
     attributes:
       label: Package version
       description: Which package version are you using?
-      placeholder: "1.0.0"
+      placeholder: "1.0.2"
     validations:
       required: true
   - type: input
@@ -58,6 +58,6 @@ body:
     attributes:
       label: Xcode version
       description: Which version of Xcode are you using?
-      placeholder: "14.3.0"
+      placeholder: "15.0.0"
     validations:
       required: true
