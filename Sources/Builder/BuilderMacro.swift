@@ -1,8 +1,22 @@
-//
-//  File.swift
-//  
-//
-//  Created by Jihoonahn on 10/11/23.
-//
-
-import Foundation
+#if swift(>=5.9)
+/// A macro that supports Builder
+///
+/// ### Builder Macro Support
+///
+/// ```swift
+/// @Builder
+/// struct Team {
+///     var name: String?
+///     var librayName: String?
+///     mutating func libraryName() {
+///         librayName = "Builder"
+///     }
+/// }
+/// ```
+///
+@attached(extension, conformances: BuilderCompatible, names: named(requirement))
+public macro Builder() = #externalMacro(
+    module: "BuilderMacro",
+    type: "BuilderMacro"
+)
+#endif

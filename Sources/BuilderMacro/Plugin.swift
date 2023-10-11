@@ -1,8 +1,11 @@
-//
-//  File.swift
-//  
-//
-//  Created by Jihoonahn on 10/11/23.
-//
+import SwiftCompilerPlugin
+import SwiftSyntax
+import SwiftSyntaxMacros
 
-import Foundation
+/// Builder Macro's Compiler plugin
+@main
+struct BuilderMacroPlugin: CompilerPlugin {
+    var providingMacros: [Macro.Type] = [
+        BuilderMacro.self
+    ]
+}
