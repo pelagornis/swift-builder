@@ -14,7 +14,7 @@ Builder was deployed as Swift Package Manager. Package to install in a project. 
 let package = Package(
     ...
     dependencies: [
-        .package(url: "https://github.com/pelagornis/builder.git", from: "1.0.1")
+        .package(url: "https://github.com/pelagornis/builder.git", from: "1.0.2")
     ],
     ...
 )
