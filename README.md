@@ -35,10 +35,10 @@ Initializer UIView with ``Builder``
 
 ```swift
 let view = UIView()
-             .builder()
-             .translatesAutoresizingMaskIntoConstraints(false)
-             .backgroundColor(.systemBlue)
-             .build()
+    .builder()
+    .translatesAutoresizingMaskIntoConstraints(false)
+    .backgroundColor(.systemBlue)
+    .build()
 ```
 
 This is equivalent to
