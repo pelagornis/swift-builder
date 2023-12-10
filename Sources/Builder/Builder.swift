@@ -52,7 +52,7 @@ public struct Builder<Base> {
 
     /// Build is responsible for creating objects.
     public func build() -> Base {
-        return self.base
+        self.base
     }
 }
 
