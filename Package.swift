@@ -4,7 +4,13 @@ import CompilerPluginSupport
 
 let package = Package(
     name: "builder",
-    platforms: [.macOS(.v10_15), .iOS(.v13), .tvOS(.v13), .watchOS(.v6), .macCatalyst(.v13)],
+    platforms: [
+        .macOS(.v10_15), 
+        .iOS(.v13),
+        .tvOS(.v13),
+        .watchOS(.v6),
+        .macCatalyst(.v13)
+    ],
     products: [
         .library(
             name: "Builder",
@@ -48,6 +54,7 @@ let package = Package(
         ),
         .testTarget(
             name: "BuilderTests",
-            dependencies: ["Builder"]),
+            dependencies: ["Builder"]
+        ),
     ]
 )
