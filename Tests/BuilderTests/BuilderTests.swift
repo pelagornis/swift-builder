@@ -9,7 +9,7 @@ struct Team {
     }
 }
 
-extension Team: BuilderCompatible {}
+extension Team: Buildable {}
 
 final class BuilderTests: XCTestCase {
     func testBuilder_NSObject() {
