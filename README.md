@@ -24,6 +24,12 @@ Then import the Builder from thr location you want to use.
 ```swift
 import Builder
 ```
+And then adding the product to any target that needs access to the library:
+
+```swift
+.product(name: "Builder", package: "swift-builder"),
+```
+
 
 ## Documentation
 The documentation for releases and ``main`` are available here:
@@ -52,7 +58,18 @@ let view: UIView = {
 }()
 ```
 
-## Support Macro
+Want to use with your own types? Just make extensions.
+
+```swift
+extension MyType: Buildable {}
+
+let instance = MyType()
+    .builder()
+    .property("some value")
+    .build()
+```
+
+## Support Macros
 Starting with Swift version `5.9`, `@Builder` macro is supported.
 
 ```swift
