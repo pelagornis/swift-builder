@@ -12,7 +12,7 @@ public struct BuilderMacro: ExtensionMacro {
     ) throws -> [ExtensionDeclSyntax] {
         return try [
             ExtensionDeclSyntax(
-                "extension \(raw: type.description): BuilderCompatible {}"
+                "extension \(raw: type.description): Buildable {}"
             )
         ]
     }

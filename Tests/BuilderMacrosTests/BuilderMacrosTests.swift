@@ -1,8 +1,8 @@
+#if canImport(BuilderMacros)
+import BuilderMacros
 import SwiftSyntaxMacros
 import SwiftSyntaxMacrosTestSupport
 import XCTest
-
-import BuilderMacro
 
 let testMacros: [String: Macro.Type] = [
     "Builder": BuilderMacro.self
@@ -23,7 +23,7 @@ final class BuilderMacrosTests: XCTestCase {
             var name: String
         }
         
-        extension Person: BuilderCompatible {
+        extension Person: Buildable {
         }
         """,
         macros: testMacros)
@@ -44,9 +44,10 @@ final class BuilderMacrosTests: XCTestCase {
             var age: Int
         }
         
-        extension Person: BuilderCompatible {
+        extension Person: Buildable {
         }
         """,
         macros: testMacros)
     }
 }
+#endif
