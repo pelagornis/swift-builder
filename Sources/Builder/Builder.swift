@@ -36,12 +36,12 @@ public struct Builder<Base> {
     ///
     /// ```swift
     /// let view = UIView()
-    ///               .builder()
-    ///               .backgroundColor(.red)
-    ///               .with {
-    ///                   $0.layer.cornerRadius = 15
-    ///                }
-    ///                .build()
+    ///            .builder()
+    ///            .backgroundColor(.red)
+    ///            .with {
+    ///                $0.layer.cornerRadius = 15
+    ///            }
+    ///            .build()
     /// ```
     ///
     /// - Parameter block: The closure to execute.
