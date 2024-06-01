@@ -27,3 +27,9 @@ public struct BuilderMacro: ExtensionMacro {
         return [ext.cast(ExtensionDeclSyntax.self)]
     }
 }
+
+extension Array where Element == String {
+    var withQualified: Self {
+        self.flatMap { [$0, "Builder.\($0)"] }
+    }
+}
