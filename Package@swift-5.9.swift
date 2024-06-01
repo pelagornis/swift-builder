@@ -16,10 +16,6 @@ let package = Package(
         .library(
             name: "Builder",
             targets: ["Builder"]
-        ),
-        .executable(
-            name: "BuilderMacroClient",
-            targets: ["BuilderMacroClient"]
         )
     ],
     dependencies: [
@@ -37,17 +33,14 @@ let package = Package(
         .target(
             name: "Builder",
             dependencies: [
-                "BuilderMacro"
-            ]
-        ),
-        .executableTarget(
-            name: "BuilderMacroClient",
-            dependencies: [
-                "Builder"
+                "BuilderMacros"
+            ],
+            resources: [
+                .process("Resources/PrivacyInfo.xcprivacy")
             ]
         ),
         .testTarget(
-            name: "BuilderMacroTests",
+            name: "BuilderMacrosTests",
             dependencies: [
                 "Builder",
                 .product(name: "SwiftSyntaxMacrosTestSupport", package: "swift-syntax")

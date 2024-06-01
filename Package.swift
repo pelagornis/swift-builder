@@ -20,7 +20,12 @@ let package = Package(
         .package(url: "https://github.com/apple/swift-docc-plugin.git", from: "1.3.0"),
     ],
     targets: [
-        .target(name: "Builder"),
+        .target(
+            name: "Builder",
+            resources: [
+                .process("Resources/PrivacyInfo.xcprivacy")
+            ]
+        ),
         .testTarget(
             name: "BuilderTests",
             dependencies: ["Builder"]
