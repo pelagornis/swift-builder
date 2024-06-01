@@ -27,7 +27,7 @@ import Builder
 
 ## Documentation
 The documentation for releases and ``main`` are available here:
-- [``main``](https://pelagornis.github.io/builder/main/documentation/builder)
+- [``main``](https://pelagornis.github.io/swift-builder/main/documentation/builder)
 
 
 ## Using
