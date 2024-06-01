@@ -10,10 +10,20 @@ public struct BuilderMacro: ExtensionMacro {
         conformingTo protocols: [TypeSyntax],
         in context: some MacroExpansionContext
     ) throws -> [ExtensionDeclSyntax] {
-        return try [
-            ExtensionDeclSyntax(
-                "extension \(raw: type.description): Buildable {}"
+        if let inheritanceClause = declaration.inheritanceClause,
+            inheritanceClause.inheritedTypes.contains(
+                where: {
+                    ["Buildable"].withQualified.contains($0.type.trimmedDescription)
+                }
             )
-        ]
+        {
+            return []
+        }
+
+        let ext: DeclSyntax =
+            """
+            \(declaration.attributes.availability)extension \(type.trimmed): Buildable {}
+            """
+        return [ext.cast(ExtensionDeclSyntax.self)]
     }
 }
