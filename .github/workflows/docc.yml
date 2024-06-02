@@ -59,7 +59,7 @@ jobs:
                 --target Builder \
                 --output-path docs-out/"$tag" \
                 --transform-for-static-hosting \
-                --hosting-base-path /builder/"$tag" \
+                --hosting-base-path /swift-builder/"$tag" \
                     && echo "✅ Documentation generated for "$tag" release." \
                     || echo "⚠️ Documentation skipped for "$tag".";
             fi;
