@@ -8,7 +8,7 @@ Builder was deployed as Swift Package Manager. Package to install in a project. 
 let package = Package(
     ...
     dependencies: [
-        .package(url: "https://github.com/Pelagornis/Builder.git", from: "1.0.0")
+        .package(url: "https://github.com/pelagornis/swift-builder.git", from: "1.1.0")
     ],
     ...
 )
