@@ -3,7 +3,7 @@
 ![Official](https://img.shields.io/badge/project-official-green.svg?colorA=303033&colorB=226af6&label=Pelagornis)
 ![SPM](https://img.shields.io/badge/SPM-compatible-brightgreen.svg)
 ![Swift](https://img.shields.io/badge/Swift-5.9-orange.svg)
-[![License](https://img.shields.io/github/license/pelagornis/Builder)](https://github.com/pelagornis/Builder/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/pelagornis/swift-builder)](https://github.com/pelagornis/swift-builder/blob/main/LICENSE)
 ![Platform](https://img.shields.io/badge/platforms-iOS%2013.0%7C%20tvOS%2013.0%7C%20macOS%2010.15%7C%20watchOS%206.0-red.svg)
 
 Builder Patterns for Flexible Syntax in Swift
