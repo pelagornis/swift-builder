@@ -6,7 +6,7 @@ on:
       - main
   pull_request:
     branches:
-      - '*'
+      - "*"
   workflow_dispatch:
 
 concurrency:
@@ -19,8 +19,8 @@ jobs:
     runs-on: macos-14
     strategy:
       matrix:
-        config: ['debug', 'release']
-        xcode: ['15.4', '16.0']
+        config: ["debug", "release"]
+        xcode: ["15.4", "16.0"]
     steps:
       - uses: actions/checkout@v4
       - name: Select Xcode ${{ matrix.xcode }}
@@ -30,4 +30,4 @@ jobs:
       - name: Run tests
         run: |
           swift test
-	        swift test -c release
+          swift test -c release
