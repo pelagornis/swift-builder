@@ -1,5 +1,4 @@
 import SwiftCompilerPlugin
-import SwiftSyntax
 import SwiftSyntaxMacros
 
 /// Builder Macro's Compiler plugin
