@@ -70,7 +70,7 @@ let instance = MyType()
 ```
 
 ## Support Macros
-Starting with Swift version `5.9`, `@Builder` macro is supported.
+`@Builder` macro is supported.
 
 ```swift
 @Builder
