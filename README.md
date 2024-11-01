@@ -32,7 +32,7 @@ And then adding the product to any target that needs access to the library:
 
 
 ## Documentation
-The documentation for releases and ``main`` are available here:
+The documentation for releases and ``latest`` are available here:
 - [``latest``](https://pelagornis.github.io/swift-builder/latest/documentation/builder)
 
 
