@@ -1,4 +1,3 @@
-#if canImport(BuilderMacros)
 import BuilderMacros
 import SwiftSyntaxMacros
 import SwiftSyntaxMacrosTestSupport
@@ -50,4 +49,3 @@ final class BuilderMacrosTests: XCTestCase {
         macros: testMacros)
     }
 }
-#endif
