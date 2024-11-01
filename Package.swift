@@ -1,4 +1,5 @@
 // swift-tools-version: 5.9
+import CompilerPluginSupport
 import PackageDescription
 
 let package = Package(
@@ -18,10 +19,14 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-docc-plugin.git", from: "1.3.0"),
+        .package(url: "https://github.com/swiftlang/swift-syntax.git", from: "600.0.0-latest"),
     ],
     targets: [
         .target(
             name: "Builder",
+            dependencies: [
+                "BuilderMacros"
+            ],
             resources: [
                 .process("Resources/PrivacyInfo.xcprivacy")
             ]
@@ -29,6 +34,20 @@ let package = Package(
         .testTarget(
             name: "BuilderTests",
             dependencies: ["Builder"]
+        ),
+        .macro(
+            name: "BuilderMacros",
+            dependencies: [
+                .product(name: "SwiftSyntaxMacros", package: "swift-syntax"),
+                .product(name: "SwiftCompilerPlugin", package: "swift-syntax")
+            ]
+        ),
+        .testTarget(
+            name: "BuilderMacrosTests",
+            dependencies: [
+                "Builder",
+                .product(name: "SwiftSyntaxMacrosTestSupport", package: "swift-syntax")
+            ]
         ),
     ]
 )
